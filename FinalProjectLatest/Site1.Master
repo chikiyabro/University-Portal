@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="FinalProjectLatest.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'/>
+    <link href="bootstrap.min.css" rel="stylesheet"/>
+    <link href="bootstrap.css" rel="stylesheet"/>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+
+        body, html {
+            font-family: Lato;
+        }
+
+    .navbar-header{
+        height: 60px;
+    }
+
+    .brand{
+        margin-left: 40px;
+        padding-top:10px;
+        height: 50px;
+    }
+
+    .nav{
+        margin-left: 200px;
+        padding-top: 5px;
+    }
+    .navbar-form{
+        padding-top: 5px;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+              <img class="brand" src="logo.png" />
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href='home.aspx?Name=<%=Session["username"] %>'>Home</a></li>
+                <li><a href="About.aspx">About</a></li>
+                <li><a href="Contact.aspx">Contact</a></li>
+                <li><a href="WebForm1.aspx?Program=0&City=0">Universities</a></li></ul>
+                
+                <div  id="div1" Visible="true" runat="server">
+                    <ul class="nav navbar-nav">
+                <li><a href="signup.aspx">Signup</a></li>
+                <li><a href="login.aspx">Login</a></li>
+                     </ul>
+                    </div>
+
+               
+               
+             
+                <div  id="div2" Visible="false" runat="server">
+                    <ul class="nav navbar-nav">
+                <li><a href="logout.aspx">Logout</a>
+                    <li><a href='userdetails.aspx?Name=<%=Session["username"] %>'>User Details</a></li>
+                    </ul>
+                </div>
+               
+            
+              <!--<form role="search" class="navbar-form navbar-right">
+                 <div class="form-group">
+                    <input type="text" placeholder="Search" class="form-control">
+                 </div>
+             </form>-->
+        </div>
+        </div>
+    </nav>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿html{
+        font-family: 'Lato', sans-serif;
+    }
+    body{
+        font-family: 'Lato', sans-serif;
+    }
+
+    .heading{
+        padding-top: 50px;
+        font-size: 350%;
+        color: #265b80;
+    }
+
+    #email{
+        width: 400px;
+        height: 40px;
+        border: solid 1px grey;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+    .password{
+        width: 400px;
+        height: 40px;
+        border: solid 1px grey;
+        border-radius: 10px;
+        padding-left: 10px;
+    }
+
+
+
+    #submitLogin{
+        font-family: 'Lato', sans-serif;
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        background-color:#265b80;
+        color: white;
+        font-size: 150%;
+        border: solid 1px grey;
+    }
+    
+    .logo{
+        width:20%;
+    }
